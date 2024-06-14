@@ -15,7 +15,7 @@ Security groups and IAM were needed to be configured for all the above resources
 
 For more detailed information on the topics discussed, refer to the following documents in the `docs` directory:
 
-- [Development to Production](docs/development-to-production.md)
-- [Datadog Reasoning](docs/datadog-reasoning.md)
-- [AWS Resources Involved](docs/aws-resources-involved.md)
-- [ECS vs EKS](docs/ecs-vs-eks.md)
+- [Development to Production](docs/development-to-production.md) (pipeline and differences between environments)
+- [Datadog Reasoning](docs/datadog-reasoning.md) (cost and scalability)
+- [AWS Resources Involved](docs/aws-resources-involved.md) (scalability and security)
+- [ECS vs EKS](docs/ecs-vs-eks.md) (cost and scalability )
