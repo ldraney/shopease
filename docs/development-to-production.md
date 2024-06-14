@@ -8,4 +8,4 @@ These environments each have slight modifications:
   - number of ecs tasks per env
   - a DB for each env
   - production, perf, and staging all have auto-scaling set up, but only perf matches the size of production for load testing.
-  - canary nor dev should need auto-scaling because they should have expected loads. 
+  - neither canary nor dev should need auto-scaling because they should have expected loads. 
