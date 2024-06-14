@@ -2,6 +2,36 @@
 demo project for a technical interview 
 
 ## Architecture Diagram
+```mermaid
+flowchart TD
+    User[User] --> Route53[Route53 DNS]
+    Route53 --> ALB[Application Load Balancer]
+    ALB --> TargetGroup[Target Group]
+    TargetGroup --> FE[Frontend ECS Task]
+    FE --> S3[S3 Bucket]
+    FE --> BE[Backend ECS Task]
+    BE --> ECR[ECR - VPC Endpoint]
+    FE --> ECR
+    BE --> RDS[PostGres RDS]
+    
+    FE --> SSM[SSM]
+    BE --> SSM
+    SSM --> KMS[KMS Encryption]
+
+    subgraph VPC
+        ALB
+        TargetGroup
+        FE
+        BE
+        RDS
+        S3
+        ECR
+        SSM
+    end
+
+    class ALB,TargetGroup,FE,BE,RDS,S3,ECR,SSM,KMS security;
+    classDef security fill:#f9f,stroke:#333,stroke-width:2px;
+```
 
 ## Main.tf Resource - Fargate ECS
 
