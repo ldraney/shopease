@@ -30,7 +30,8 @@ flowchart TD
     end
 
     class ALB,TargetGroup,FE,BE,RDS,S3,ECR,SSM,KMS security;
-    classDef security fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef security fill:#a6cee3,stroke:#1f78b4,stroke-width:2px,color:#000;
+
 ```
 
 ## Main.tf Resource - Fargate ECS
